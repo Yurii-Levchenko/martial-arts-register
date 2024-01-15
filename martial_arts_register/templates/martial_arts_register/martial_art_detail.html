@@ -1,0 +1,19 @@
+{%extends "martial_arts_register/base.html"%}
+
+{%block title%}
+{{name}}
+{% endblock %}
+
+{%block content%}
+<h1>{{name}}</h1>
+<h2>{{country_of_origin}}</h2>
+<p>The general efficiency of {{name}}: {{rating}}*/5*</p>
+
+{%if joint_locks_allowed%}
+Joint locks are allowed in this Martial Art
+{%else%}
+Joint locks are not allowed in this Martial Art
+{%endif%}
+
+
+{%endblock%}

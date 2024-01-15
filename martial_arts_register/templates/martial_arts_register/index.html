@@ -1,0 +1,18 @@
+{%extends "martial_arts_register/base.html"%}
+
+{%block title%}
+Martial Arts list
+{% endblock %}
+
+{%block content%}
+<ol>
+    {%for martial_art in martial_arts%}
+    <li><a href="{{martial_art.get_absolute_url}}">{{martial_art.name}}</a>, Rating:{{martial_art.rating}}</li>
+    {%endfor%}
+</ol>
+
+<hr>
+
+<p>Total number of Martial Arts in the register: {{total}}</p>
+<p>Average rating: {{average_rating.rating__avg}}*</p>
+{%endblock%}
